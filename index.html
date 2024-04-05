@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jinsheng Ji's Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #fff;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+        h1, h2 {
+            color: #ff6f61;
+        }
+        h2 {
+            margin-top: 20px;
+        }
+        .paper {
+            margin-bottom: 20px;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px 0;
+            background-color: #333;
+            color: #fff;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .cube-container {
+            margin-top: 50px;
+            perspective: 800px;
+        }
+        .cube {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotateCube 5s infinite linear;
+        }
+        .face {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255, 111, 97, 0.7);
+            border: 1px solid #fff;
+            text-align: center;
+            line-height: 100px;
+            font-size: 24px;
+            color: #fff;
+        }
+        .front {
+            transform: translateZ(50px);
+        }
+        .back {
+            transform: rotateY(180deg) translateZ(50px);
+        }
+        .top {
+            transform: rotateX(-90deg) translateZ(50px);
+        }
+        .bottom {
+            transform: rotateX(90deg) translateZ(50px);
+        }
+        .right {
+            transform: rotateY(90deg) translateZ(50px);
+        }
+        .left {
+            transform: rotateY(-90deg) translateZ(50px);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes rotateCube {
+            from { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+            to { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Jinsheng Ji</h1>
+            <p>Assistant Professor, Department of Computer Science</p>
+        </header>
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li>Ph.D. in Computer Science, XX University, 20XX</li>
+                <li>M.S. in Artificial Intelligence, XX University, 20XX</li>
+                <li>B.S. in Information Engineering, XX University, 20XX</li>
+            </ul>
+        </section>
+        <section id="experience">
+            <h2>Experience</h2>
+            <ul>
+                <li>Assistant Professor, Department of Computer Science, XX University, 20XX - Present</li>
+                <li>Research Scientist, XX Research Institute, 20XX - 20XX</li>
+            </ul>
+        </section>
+        <section id="publications">
+            <h2>Publications</h2>
+            <div class="paper">
+                <h3>A Novel Approach to Sentiment Analysis Using Deep Learning Techniques</h3>
+                <p>Journal of Artificial Intelligence Research, Vol. 25, No. 3, pp. 112-125, 20XX</p>
+            </div>
+            <div class="paper">
+                <h3>Deep Reinforcement Learning for Autonomous Navigation in Dynamic Environments</h3>
+                <p>IEEE Transactions on Robotics, Vol. 38, No. 2, pp. 245-259, 20XX</p>
+            </div>
+            <div class="paper">
+                <h3>Exploring the Role of Attention Mechanisms in Neural Machine Translation</h3>
+                <p>Conference on Empirical Methods in Natural Language Processing (EMNLP), 20XX</p>
+            </div>
+        </section>
+        
+        <!-- 交互按钮 -->
+        <button onclick="showMessage()">点击这里</button>
+        
+        <!-- 旋转的立方体 -->
+        <div class="cube-container">
+            <div class="cube">
+                <div class="face front">前</div>
+                <div class="face back">后</div>
+                <div class="face top">上</div>
+                <div class="face bottom">下</div>
+                <div class="face right">右</div>
+                <div class="face left">左</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript 代码 -->
+    <script>
+        function showMessage() {
+            alert('欢迎访问我的个人网页！');
+        }
+    </script>
+</body>
+</html>
